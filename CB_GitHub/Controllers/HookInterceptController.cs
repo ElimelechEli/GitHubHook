@@ -23,6 +23,8 @@ namespace CB_GitHub.Controllers
         [HttpPost]
         public object Post([FromHeader] Dictionary<string, string> header, [FromBody] object body)
         {
+            
+            Console.WriteLine(JsonSerializer.Serialize(body));
             return body;
         }
     }
